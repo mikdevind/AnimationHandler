@@ -1,34 +1,34 @@
-# AnimationHandler Library
+# Library AnimationHandler
 
-## Overview
-`AnimationHandler` is a lightweight JavaScript library designed to add scroll-based animations to elements on your webpage. This library makes it easy to implement various effects such as sliding, zooming, bouncing, and more, using the Intersection Observer API.
+## Gambaran Umum
+`AnimationHandler` adalah library JavaScript ringan yang dirancang untuk menambahkan animasi berbasis scroll pada elemen di halaman web Anda. Library ini mempermudah implementasi berbagai efek seperti sliding, zooming, bouncing, dan lainnya menggunakan API Intersection Observer.
 
-## Features
-- Animate elements when they come into view.
-- Multiple predefined animations: slide, zoom, rotate, bounce, flip, fade, spin, scale, wobble, and type.
-- Configurable animation duration and visibility threshold.
-- Lightweight and easy to use.
+## Fitur
+- Animasi elemen saat muncul di layar.
+- Beragam animasi bawaan: slide, zoom, rotate, bounce, flip, fade, spin, scale, wobble, dan type.
+- Durasi animasi dan threshold visibilitas yang dapat dikonfigurasi.
+- Ringan dan mudah digunakan.
 
-## Installation
-Include the `AnimationHandler.js` file in your project.
-
-```html
-<script src="AnimationHandler.js"></script>
-```
-
-## Usage
-
-### HTML Setup
-Add the `data-animation` attribute to the elements you want to animate and specify the desired animation type. Example:
+## Instalasi
+Sertakan file `AnimationHandler.js` dalam proyek Anda.
 
 ```html
-<div class="box" data-animation="slide">Slide Animation</div>
-<div class="box" data-animation="zoom">Zoom Animation</div>
-<div class="box" data-animation="rotate">Rotate Animation</div>
+<script type="module" src="AnimationHandler.js"></script>
 ```
 
-### JavaScript Initialization
-Import the `AnimationHandler` class and initialize it with the selector of the elements to animate.
+## Penggunaan
+
+### Pengaturan HTML
+Tambahkan atribut `data-animation` pada elemen yang ingin dianimasikan dan tentukan jenis animasi yang diinginkan. Contoh:
+
+```html
+<div class="box" data-animation="slide">Animasi Slide</div>
+<div class="box" data-animation="zoom">Animasi Zoom</div>
+<div class="box" data-animation="rotate">Animasi Rotate</div>
+```
+
+### Inisialisasi JavaScript
+Impor kelas `AnimationHandler` dan inisialisasi dengan selector elemen yang akan dianimasikan.
 
 ```javascript
 import { AnimationHandler } from './AnimationHandler.js';
@@ -36,37 +36,37 @@ import { AnimationHandler } from './AnimationHandler.js';
 new AnimationHandler('.box');
 ```
 
-### Parameters
+### Parameter
 `AnimationHandler(selector, threshold = 0.5, durationEffect = 500)`
 
-- **`selector`** *(string)*: CSS selector for the target elements.
-- **`threshold`** *(float)*: Visibility threshold (default: `0.5`). Determines how much of the element must be visible to trigger the animation.
-- **`durationEffect`** *(int)*: Animation duration in milliseconds (default: `500`).
+- **`selector`** *(string)*: Selector CSS untuk elemen target.
+- **`threshold`** *(float)*: Threshold visibilitas (default: `0.5`). Menentukan seberapa banyak elemen harus terlihat untuk memicu animasi.
+- **`durationEffect`** *(int)*: Durasi animasi dalam milidetik (default: `500`).
 
-## Supported Animations
-Below are the available animation types and their effects:
+## Jenis Animasi yang Didukung
+Berikut adalah jenis animasi yang tersedia beserta efeknya:
 
-| Animation Type | Description |
-|----------------|-------------|
-| `slide`        | Moves the element horizontally. |
-| `zoom`         | Scales the element from smaller to normal size. |
-| `rotate`       | Rotates the element from an angle. |
-| `bounce`       | Adds a vertical bounce effect. |
-| `flip`         | Rotates the element along the Y-axis. |
-| `fade`         | Fades in the element. |
-| `spin`         | Rotates the element from a full circle. |
-| `scale`        | Scales the element from smaller to normal size. |
-| `wobble`       | Adds a horizontal wobble effect. |
-| `type`         | Simulates typing effect for text. |
+| Jenis Animasi  | Deskripsi                         |
+|----------------|-----------------------------------|
+| `slide`        | Memindahkan elemen secara horizontal. |
+| `zoom`         | Menskalakan elemen dari kecil ke ukuran normal. |
+| `rotate`       | Memutar elemen dari sudut tertentu. |
+| `bounce`       | Memberikan efek pantulan vertikal. |
+| `flip`         | Memutar elemen pada sumbu Y. |
+| `fade`         | Menghilangkan elemen secara perlahan. |
+| `spin`         | Memutar elemen dalam lingkaran penuh. |
+| `scale`        | Menskalakan elemen dari kecil ke ukuran normal. |
+| `wobble`       | Memberikan efek goyangan horizontal. |
+| `type`         | Mensimulasikan efek mengetik pada teks. |
 
-## Example
+## Contoh
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimationHandler Demo</title>
+    <title>Demo AnimationHandler</title>
     <script type="module" src="AnimationHandler.js" defer></script>
     <style>
         .box {
@@ -93,11 +93,11 @@ Below are the available animation types and their effects:
 </html>
 ```
 
-## License
-This library is open-source and available under the [MIT License](LICENSE).
+## Lisensi
+Library ini bersifat open-source dan tersedia di bawah [Lisensi MIT](LICENSE).
 
-## Contributions
-Contributions are welcome! Feel free to submit issues, feature requests, or pull requests.
+## Kontribusi
+Kontribusi sangat diterima! Jangan ragu untuk mengajukan masalah, permintaan fitur, atau pull request.
 
 ---
-For further questions, please contact the library author or refer to the source code for detailed insights.
+Untuk pertanyaan lebih lanjut, silakan hubungi penulis library atau lihat kode sumber untuk wawasan lebih mendalam.
